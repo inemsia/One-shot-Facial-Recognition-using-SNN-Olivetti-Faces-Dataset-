@@ -42,9 +42,3 @@ Contains all files related to model evaluation:
   - Second evaluation dataset (Not used during training): Yale Face Dataset
 
 ---
-
-## How to Run
-
-1. Train the model:
-   ```bash
-   Open snn_training.ipynb and run all cells
