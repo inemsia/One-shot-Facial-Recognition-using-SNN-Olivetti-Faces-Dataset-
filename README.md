@@ -11,8 +11,9 @@ This project focuses on training and evaluating a Siamese Neural Network (SNN) f
 - Uses 80,000 pairs of images from the Olivetti Faces dataset.
 - Sections include:
   - Data loading and preprocessing
-  - Construction of the CNN-based feature extractor (`cnn_part`)
-  - Assembly of the full Siamese architecture
+  - Organizing data into pairs
+  - Building the CNN-based feature extractor (`cnn_part`)
+  - Building the full Siamese architecture
   - Model training and saving
 
 ### `trained_model/`
@@ -26,8 +27,7 @@ Contains all files related to model evaluation:
   Each trial uses only one image per person for recognition.
 
 - **`evaluation_unseen_dataset.py`**  
-  Evaluates the same trained model on the Yale face dataset.  
-  Tests the model's ability to generalize to completely unseen classes.
+  Evaluates the same trained model on the Yale face dataset to test the model's ability to generalize to completely unseen classes.
 
 - **`one_shot_functions.py`**  
   Contains helper functions used in both evaluation scripts for organizing and running one-shot learning trials.
@@ -38,8 +38,8 @@ Contains all files related to model evaluation:
 
 - **Training Dataset:** Olivetti Faces (used to create training pairs)
 - **Evaluation Datasets:**
-  - Seen: Olivetti Faces (with identities excluded during training)
-  - Unseen: Yale Face Dataset
+  - Training dataset: Olivetti Faces (with identities excluded during training)
+  - Second evaluation dataset (Not used during training): Yale Face Dataset
 
 ---
 
